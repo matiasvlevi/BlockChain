@@ -8,6 +8,8 @@ void add(Chain chain)
 {
 	// Ask for Input Data from the user:
 	string data;
+	cout << " " << endl;
+	cout << " Add new block: ";
 	getline(cin, data);
 	chain.add(data);
 	// Clear & log chain
