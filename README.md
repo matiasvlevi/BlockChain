@@ -1,5 +1,5 @@
-# Blockchain Prototype
-This is a simple blockchain in cpp.
+# Blockchain 
+This is a very simple blockchain in c++. Made for fun!
 
 ### Usage
 
