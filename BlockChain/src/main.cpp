@@ -4,7 +4,7 @@
 #include "Chain.h"
 #include <string>
 using namespace std;
-void add(Chain chain)
+void prompt(Chain chain)
 {
 	// Ask for Input Data from the user:
 	string data;
@@ -16,7 +16,7 @@ void add(Chain chain)
 	system("cls");
 	chain.log();
 	// Call Add again
-	add(chain);
+	prompt(chain);
 }
 int main() 
 {
@@ -24,6 +24,6 @@ int main()
 	Chain chain;
 	chain.log();
 	// Ask for user Input
-	add(chain);
+	prompt(chain);
 }
 

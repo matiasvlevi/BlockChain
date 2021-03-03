@@ -10,6 +10,7 @@ using namespace std;
 class Block {
 	public:
 		int index;
+		bool valid;
 		string previousHash;
 		string time;
 		string hash;

@@ -16,6 +16,7 @@ class Chain
 		Chain();
 		void add(string data);
 		void log();
+		bool isValid(Block block);
 };
 
 #endif

@@ -12,25 +12,53 @@ using namespace std;
 
 Chain::Chain() 
 {
-	string tstr = getTimeStamp();
-	Block gen;
-	gen.init("Genosis", tstr,"0",0);
-	list.push_back(gen);
+	add("Genosis");
 }
 
 void Chain::add(string data) 
 {
 	string tstr = getTimeStamp();
 	Block b;
-	b.init(data, tstr, list[list.size() - 1].hash, list.size());
-	list.push_back(b);
-}
+	
+	int index = list.size();
+	string pHash = "0";
+	if (index != 0) {
+		pHash = list[list.size() - 1].hash;
+	}
+	b.init(data, tstr, pHash, index);
 
+	bool valid = isValid(b);
+	b.valid = valid;
+	if (b.valid) {
+		list.push_back(b);
+	} else {
+		cout << "Block is not valid" << endl;
+	}
+	
+}
+bool Chain::isValid(Block block)
+{
+	if (list.size() != 0) {
+		Block currentBlock = list[list.size() - 1];
+		if (currentBlock.index + 1 != block.index) {
+			return false;
+		}
+		else if (currentBlock.hash != block.previousHash) {
+			return false;
+		}
+		else {
+			return true;
+		}
+	} else {
+		return true;
+	}
+
+}
 void Chain::log()
 {
 	cout << "Chain (len: " << list.size() << ")" << endl;
 	cout << "[" << endl;
-	for (int i = 0; i < list.size(); i++) {
+	for (unsigned int i = 0; i < list.size(); i++) {
 		list[i].log();
 		if (i != list.size() - 1) {
 			cout << "," << endl;
