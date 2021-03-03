@@ -1,1 +1,9 @@
-﻿  timeStamp.cpp
+﻿  Block.cpp
+  Chain.cpp
+C:\Users\Agustin\source\repos\BlockChain\BlockChain\src\Chain.cpp(33,20): warning C4018: '<': signed/unsigned mismatch
+  main.cpp
+  sha256.cpp
+  timeStamp.cpp
+  Generating Code...
+C:\Users\Agustin\source\repos\BlockChain\BlockChain\src\main.cpp(18): warning C4717: 'add': recursive on all control paths, function will cause runtime stack overflow
+  BlockChain.vcxproj -> C:\Users\Agustin\source\repos\BlockChain\BlockChain\Binaries\Debug\BlockChain.exe
