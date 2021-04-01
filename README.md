@@ -3,7 +3,7 @@ This is a very simple blockchain in c++. Made for fun!
 
 ### Usage
 
-* Launch the `run.bat` file or execute `BlockChain\Binaries\Debug\BlockChain.exe` manually.
+* Download the binary in releases [here](https://github.com/matiasvlevi/BlockChain/releases/tag/v1.0.0).
 * Add string data
 
 ### Example
